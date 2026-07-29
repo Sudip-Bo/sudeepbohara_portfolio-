@@ -1,4 +1,4 @@
-# Sudip Bohara Portfolio
+# Sudeep Bohara Portfolio
 
 A premium portfolio website for a Web Designer, Web Developer, and UI/UX Designer. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 
