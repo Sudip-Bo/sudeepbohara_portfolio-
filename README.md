@@ -183,11 +183,11 @@ This project is proprietary and confidential.
 
 ## 👤 Author
 
-**Sudip Bohara**
+**Sudeep Bohara**
 - Title: Web Designer • Web Developer • UI/UX Designer
-- Email: sudeepbohara@gmail.com
+- Email: sudeepbohara.np@gmail.com
 - Portfolio: sudeepbohara.com.np
 
 ## 🤝 Support
 
-For issues or questions, please contact sudeepbohara@gmail.com
+For issues or questions, please contact sudeepbohara.np@gmail.com
