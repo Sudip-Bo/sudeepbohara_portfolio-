@@ -1,4 +1,4 @@
-# Sudip Bohara Portfolio
+# Sudeep Bohara Portfolio
 
 A premium portfolio website for a Web Designer, Web Developer, and UI/UX Designer. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 
@@ -183,11 +183,11 @@ This project is proprietary and confidential.
 
 ## 👤 Author
 
-**Sudip Bohara**
+**Sudeep Bohara**
 - Title: Web Designer • Web Developer • UI/UX Designer
-- Email: sudeepbohara@gmail.com
+- Email: sudeepbohara.np@gmail.com
 - Portfolio: sudeepbohara.com.np
 
 ## 🤝 Support
 
-For issues or questions, please contact sudeepbohara@gmail.com
+For issues or questions, please contact sudeepbohara.np@gmail.com
