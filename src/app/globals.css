@@ -3,24 +3,43 @@
 @tailwind utilities;
 
 :root {
-  /* Brand Guide Color Palette - Light Theme */
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-  --primary: #0a0a0a;
-  --primary-foreground: #ffffff;
-  --surface-1: #f9fafb;
-  --surface-2: #f3f4f6;
-  --frosted-glass: rgba(255, 255, 255, 0.8);
-  --border-subdued: rgba(0, 0, 0, 0.1);
-  --border-highlight: rgba(0, 0, 0, 0.2);
+  /* Dark Obsidian Precision Design System */
+  --bg-canvas: #050507;
+  --bg-surface-1: #0A0B10;
+  --bg-surface-2: #12131C;
+  --bg-surface-3: #1A1C29;
+  --bg-glass: rgba(10, 11, 16, 0.65);
+  
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --text-inverse: #0A0A0A;
+  
   --accent-indigo: #6366F1;
   --accent-cyan: #06B6D4;
   --accent-emerald: #10B981;
-  --muted: rgba(0, 0, 0, 0.6);
-  --muted-foreground: rgba(0, 0, 0, 0.5);
-  --card: #ffffff;
-  --card-foreground: #0a0a0a;
-  --border: rgba(0, 0, 0, 0.1);
+  --functional-warning: #F59E0B;
+  --functional-error: #EF4444;
+  
+  --border-subdued: rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(99, 102, 241, 0.40);
+  
+  --shadow-ambient: 0 20px 40px -15px rgba(0,0,0,0.7);
+  --glow-indigo: 0 0 25px rgba(99, 102, 241, 0.25);
+  
+  /* Legacy aliases for compatibility */
+  --background: var(--bg-canvas);
+  --foreground: var(--text-primary);
+  --primary: var(--text-primary);
+  --primary-foreground: var(--text-inverse);
+  --surface-1: var(--bg-surface-1);
+  --surface-2: var(--bg-surface-2);
+  --frosted-glass: var(--bg-glass);
+  --muted: var(--text-secondary);
+  --muted-foreground: var(--text-muted);
+  --card: var(--bg-surface-1);
+  --card-foreground: var(--text-primary);
+  --border: var(--border-subdued);
 }
 
 body {
@@ -46,9 +65,32 @@ body {
   }
   
   .frosted {
-    background: var(--frosted-glass);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+  }
+  
+  .frosted-dark {
+    background: rgba(10, 11, 16, 0.65);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .glow-card-hover {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .glow-card-hover:hover {
+    border-color: rgba(99, 102, 241, 0.40);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.20);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #FFFFFF 0%, #818CF8 50%, #06B6D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .sr-only {
