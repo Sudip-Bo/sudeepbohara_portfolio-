@@ -81,7 +81,7 @@ export function FeaturedWork() {
     return null;
   }
   return (
-    <section className="py-24 px-6 bg-surface-1">
+    <section id="featured-work" className="py-24 px-6 bg-surface-1">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

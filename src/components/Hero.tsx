@@ -1,53 +1,91 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { StatusBadgePill } from "./hero/StatusBadgePill";
+import { ButtonPrimaryGlow } from "./hero/ButtonPrimaryGlow";
+import { ButtonSecondaryGlass } from "./hero/ButtonSecondaryGlass";
+import { StatisticsBarGrid } from "./hero/StatisticsBarGrid";
+import { HeroFrameShowcase } from "./hero/HeroFrameShowcase";
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20">
-      <div className="max-w-5xl mx-auto text-center">
+    <section 
+      className="relative min-h-screen flex flex-col items-center justify-center px-5 md:px-8 lg:px-16 pt-24 md:pt-30 lg:pt-40 pb-16 md:pb-24 lg:pb-32 overflow-hidden"
+      aria-label="Hero Introduction"
+    >
+      {/* Background Lighting Effects */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `
+            radial-gradient(600px circle at 50% 0%, rgba(99, 102, 241, 0.15) 0%, rgba(99, 102, 241, 0.05) 40%, transparent 80%),
+            radial-gradient(450px circle at 85% 25%, rgba(6, 182, 212, 0.12) 0%, transparent 70%)
+          `
+        }}
+        aria-hidden="true"
+      />
+      
+      {/* Subtle Grid Pattern */}
+      <div 
+        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px'
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 max-w-7xl mx-auto text-center w-full">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ stiffness: 100, damping: 20 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-surface-1 border border-border-subdued rounded-full mb-8" role="status" aria-live="polite">
-            <CheckCircle2 className="w-4 h-4 text-accent-emerald" aria-hidden="true" />
-            <span className="text-sm font-medium text-foreground">
-              Available for new projects
+          <StatusBadgePill />
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, stiffness: 100, damping: 20 }}
+            className="text-[2.25rem] sm:text-[3rem] md:text-[3.25rem] lg:text-[4.5rem] font-bold leading-[1.12] md:leading-[1.10] lg:leading-[1.05] display-tight text-primary mb-6 max-w-5xl mx-auto text-balance"
+          >
+            Engineering{" "}
+            <span className="text-gradient">
+              High-Impact Digital Experiences
             </span>
-          </div>
+            {" "}for Growth
+          </motion.h1>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-6 leading-tight display-tight">
-            Engineering High-Impact Digital Experiences for Growth
-          </h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, stiffness: 100, damping: 20 }}
+            className="text-[0.9375rem] md:text-[1.125rem] lg:text-[1.25rem] text-secondary leading-[1.55] md:leading-[1.60] mb-10 max-w-3xl mx-auto"
+          >
+            We partner with forward-thinking companies to design and build high-converting websites, scalable web applications, custom AI interfaces, and automated workflows with extreme technical precision.
+          </motion.p>
 
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed">
-            I partner with forward-thinking companies to design and build high-converting websites, web apps, and design systems with extreme precision.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, stiffness: 100, damping: 20 }}
+            className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center w-full"
+          >
+            <ButtonPrimaryGlow href="#featured-work" className="w-full sm:w-auto">
+              View Selected Work
+            </ButtonPrimaryGlow>
+            <ButtonSecondaryGlass href="/contact" className="w-full sm:w-auto">
+              Book 15-Min Call
+            </ButtonSecondaryGlass>
+          </motion.div>
 
-          <p className="text-base md:text-lg text-accent-cyan mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
-            &quot;A website is like water—essential for every modern business.&quot;
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="/projects"
-              className="group px-8 py-4 bg-accent-indigo text-white font-medium rounded-xl hover:bg-opacity-90 transition-all flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-accent-indigo focus:ring-offset-2 focus:ring-offset-background"
-            >
-              View My Work
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-            </a>
-            <a
-              href="/contact"
-              className="px-8 py-4 bg-surface-1 text-foreground font-medium rounded-xl border border-border-subdued hover:border-border-highlight transition-all focus:outline-none focus:ring-2 focus:ring-accent-indigo focus:ring-offset-2 focus:ring-offset-background"
-            >
-              Let&apos;s Talk
-            </a>
-          </div>
-
+          <StatisticsBarGrid />
         </motion.div>
+
+        <HeroFrameShowcase />
       </div>
     </section>
   );
