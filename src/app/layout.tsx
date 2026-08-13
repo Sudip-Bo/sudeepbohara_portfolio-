@@ -15,6 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sudeepbohara.com.np"),
   title: "Sudip Bohara | Web Designer • Web Developer • UI/UX Designer",
   description: "I help businesses build trust, attract customers, and grow through premium digital experiences. Web design, development, and UI/UX services.",
   keywords: ["web design", "web development", "UI/UX design", "premium websites", "digital experiences"],

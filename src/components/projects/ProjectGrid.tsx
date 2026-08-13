@@ -81,8 +81,13 @@ export function ProjectGrid() {
                       className="object-cover hover:scale-105 will-change-transform"
                     />
                   ) : (
-                    <div className="w-full h-full bg-surface-1 flex items-center justify-center">
-                      <span className="text-muted-foreground">No image</span>
+                    <div className="w-full h-full bg-surface-1 flex items-center justify-center border-r border-border-subdued">
+                      <div className="text-center p-8">
+                        <div className="w-16 h-16 bg-surface-2 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                          <ExternalLink className="w-8 h-8 text-muted-foreground" />
+                        </div>
+                        <span className="text-muted-foreground text-sm">Project Preview</span>
+                      </div>
                     </div>
                   )}
                 </div>

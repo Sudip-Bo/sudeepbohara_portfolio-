@@ -12,10 +12,10 @@ export function ProjectsHero() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6">
             Projects
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-secondary max-w-3xl mx-auto">
             Portfolio projects demonstrating my approach to premium digital
             experiences
           </p>
