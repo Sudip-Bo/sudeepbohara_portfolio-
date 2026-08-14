@@ -44,7 +44,7 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -70,10 +70,10 @@ export function WhyChooseUs() {
               viewport={{ once: true }}
               transition={{ stiffness: 100, damping: 20, delay: index * 0.1 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="p-8 bg-white rounded-2xl border border-border-subdued shadow-sm hover:shadow-xl transition-all duration-300"
+              className="p-8 bg-surface-1 rounded-2xl border border-border-subdued shadow-sm hover:shadow-xl transition-all duration-300"
             >
               <div className="w-14 h-14 bg-surface-2 rounded-xl flex items-center justify-center mb-6">
-                <reason.icon className="w-7 h-7 text-accent-indigo" />
+                <reason.icon className="w-7 h-7 text-accent-primary" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">
                 {reason.title}

@@ -28,12 +28,12 @@ interface Service {
 }
 
 const fallbackServices: Service[] = [
-  { id: '1', title: 'Website Design', description: 'Beautiful, conversion-focused designs that build trust and drive results.', icon: 'Layout' },
-  { id: '2', title: 'Website Development', description: 'Fast, secure, and scalable web applications built with modern technologies.', icon: 'Code' },
-  { id: '3', title: 'Landing Pages', description: 'High-converting landing pages optimized for your specific campaigns.', icon: 'Smartphone' },
-  { id: '4', title: 'Website Redesign', description: 'Transform your existing website into a modern, high-performing digital asset.', icon: 'RefreshCw' },
-  { id: '5', title: 'Maintenance & Support', description: 'Ongoing support to keep your website secure, fast, and up-to-date.', icon: 'Wrench' },
-  { id: '6', title: 'SEO Services', description: 'Improve your search rankings and attract more organic traffic.', icon: 'Search' },
+  { id: '1', title: 'Website Design', description: 'Strategic design that communicates your value and converts visitors.', icon: 'Layout' },
+  { id: '2', title: 'Website Development', description: 'Clean, performant code built with modern frameworks and best practices.', icon: 'Code' },
+  { id: '3', title: 'Landing Pages', description: 'Focused pages designed to drive specific actions and conversions.', icon: 'Smartphone' },
+  { id: '4', title: 'Website Redesign', description: 'Modernize your digital presence with improved UX and performance.', icon: 'RefreshCw' },
+  { id: '5', title: 'Maintenance & Support', description: 'Reliable ongoing support to keep your site secure and performing well.', icon: 'Wrench' },
+  { id: '6', title: 'SEO Services', description: 'Technical optimization to improve visibility and search performance.', icon: 'Search' },
 ];
 
 export function Services() {
@@ -80,7 +80,7 @@ export function Services() {
     return null;
   }
   return (
-    <section className="py-24 px-6">
+    <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -93,7 +93,7 @@ export function Services() {
             Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Digital solutions designed to help your business build trust and grow
+            Design and development services that build digital presence and drive results
           </p>
         </motion.div>
 
@@ -114,7 +114,7 @@ export function Services() {
                 className="p-8 bg-surface-1 rounded-2xl border border-border-subdued hover:border-border-highlight hover:shadow-lg will-change-transform"
               >
                 <div className="w-12 h-12 bg-surface-2 rounded-xl flex items-center justify-center mb-6">
-                  <IconComponent className="w-6 h-6 text-accent-indigo" />
+                  <IconComponent className="w-6 h-6 text-accent-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">
                   {service.title}

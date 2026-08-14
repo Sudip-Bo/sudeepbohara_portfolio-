@@ -54,7 +54,7 @@ export function Navigation() {
             ))}
             <a
               href="/contact"
-              className="px-5 py-2.5 bg-accent-indigo text-white text-sm font-medium rounded-lg hover:bg-opacity-90 transition-colors"
+              className="px-5 py-2.5 bg-accent-primary text-white text-sm font-medium rounded-lg hover:bg-opacity-90 transition-colors"
             >
               Let&apos;s Talk
             </a>
@@ -97,7 +97,7 @@ export function Navigation() {
               ))}
               <a
                 href="/contact"
-                className="block px-6 py-3 bg-accent-indigo text-white text-base font-medium rounded-lg hover:bg-opacity-90 transition-colors text-center mt-4"
+                className="block px-6 py-3 bg-accent-primary text-white text-base font-medium rounded-lg hover:bg-opacity-90 transition-colors text-center mt-4"
               >
                 Let&apos;s Talk
               </a>

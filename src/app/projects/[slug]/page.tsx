@@ -65,7 +65,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <article className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="mb-8">
-            <span className="text-sm font-medium text-accent-cyan mb-4 block">
+            <span className="text-sm font-medium text-accent-secondary mb-4 block">
               {project.category}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 display-tight">
@@ -116,7 +116,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </a>
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-accent-indigo text-white font-medium rounded-xl hover:bg-opacity-90 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-accent-primary text-white font-medium rounded-xl hover:bg-opacity-90 transition-all"
             >
               Start Similar Project
             </a>

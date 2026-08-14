@@ -19,7 +19,7 @@ const technologies = [
 
 export function Technologies() {
   return (
-    <section className="py-24 px-6 bg-surface-1">
+    <section className="py-20 px-6 bg-surface-1">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,7 +45,7 @@ export function Technologies() {
               viewport={{ once: true }}
               transition={{ stiffness: 100, damping: 20, delay: index * 0.05 }}
               whileHover={{ scale: 1.05, y: -2 }}
-              className="px-6 py-3 bg-surface-2 rounded-full border border-border-subdued text-foreground font-medium hover:border-border-highlight hover:text-accent-indigo transition-all cursor-pointer"
+              className="px-6 py-3 bg-surface-2 rounded-full border border-border-subdued text-foreground font-medium hover:border-border-highlight hover:text-accent-primary transition-all cursor-pointer"
             >
               {tech}
             </motion.div>

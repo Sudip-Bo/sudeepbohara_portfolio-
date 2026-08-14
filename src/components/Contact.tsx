@@ -16,9 +16,7 @@ export function Contact() {
     const data = {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
-      company: formData.get('company') as string,
       service: formData.get('service') as string,
-      budget: formData.get('budget') as string,
       message: formData.get('message') as string,
       honeypot: formData.get('website') as string,
     };
@@ -46,7 +44,7 @@ export function Contact() {
   };
 
   return (
-    <section className="py-24 px-6">
+    <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,10 +54,10 @@ export function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 display-tight">
-            Let&apos;s Work Together
+            Get in Touch
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to build trust and grow your business? Let&apos;s talk.
+            Ready to discuss your project? Let's start a conversation.
           </p>
         </motion.div>
 
@@ -71,11 +69,11 @@ export function Contact() {
             transition={{ stiffness: 100, damping: 20 }}
           >
             {submitStatus === 'success' ? (
-              <div className="bg-surface-2 border border-accent-emerald rounded-2xl p-8 text-center">
+              <div className="bg-surface-2 border border-accent-secondary rounded-2xl p-8 text-center">
                 <p className="text-foreground font-medium">Message sent successfully! I&apos;ll get back to you within 24 hours.</p>
                 <button
                   onClick={() => setSubmitStatus('idle')}
-                  className="mt-4 text-accent-emerald hover:text-foreground font-medium"
+                  className="mt-4 text-accent-secondary hover:text-foreground font-medium"
                 >
                   Send another message
                 </button>
@@ -107,7 +105,7 @@ export function Contact() {
                     minLength={2}
                     maxLength={100}
                     autoComplete="name"
-                    className="w-full px-4 py-3 rounded-xl border border-border-subdued focus:border-accent-indigo focus:ring-2 focus:ring-accent-indigo/20 outline-none transition-all bg-surface-1 text-foreground placeholder:text-muted-foreground"
+                    className="w-full px-4 py-3 rounded-xl border border-border-subdued focus:border-accent-primary focus:ring-2 focus:ring-accent-primary/20 outline-none transition-all bg-surface-1 text-foreground placeholder:text-muted-foreground"
                     placeholder="Your name"
                   />
                 </div>
@@ -124,23 +122,8 @@ export function Contact() {
                     name="email"
                     required
                     autoComplete="email"
-                    className="w-full px-4 py-3 rounded-xl border border-border-subdued focus:border-accent-indigo focus:ring-2 focus:ring-accent-indigo/20 outline-none transition-all bg-surface-1 text-foreground placeholder:text-muted-foreground"
+                    className="w-full px-4 py-3 rounded-xl border border-border-subdued focus:border-accent-primary focus:ring-2 focus:ring-accent-primary/20 outline-none transition-all bg-surface-1 text-foreground placeholder:text-muted-foreground"
                     placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="company"
-                    className="block text-sm font-medium text-foreground mb-2"
-                  >
-                    Company (Optional)
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    className="w-full px-4 py-3 rounded-xl border border-border-subdued focus:border-accent-indigo focus:ring-2 focus:ring-accent-indigo/20 outline-none transition-all bg-surface-1 text-foreground placeholder:text-muted-foreground"
-                    placeholder="Your company name"
                   />
                 </div>
                 <div>
@@ -154,7 +137,7 @@ export function Contact() {
                     id="service"
                     name="service"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-border-subdued focus:border-accent-indigo focus:ring-2 focus:ring-accent-indigo/20 outline-none transition-all bg-surface-1 text-foreground"
+                    className="w-full px-4 py-3 rounded-xl border border-border-subdued focus:border-accent-primary focus:ring-2 focus:ring-accent-primary/20 outline-none transition-all bg-surface-1 text-foreground"
                   >
                     <option value="">Select a service</option>
                     <option value="Website Design">Website Design</option>
@@ -164,26 +147,6 @@ export function Contact() {
                     <option value="Website Redesign">Website Redesign</option>
                     <option value="SEO">SEO</option>
                     <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label
-                    htmlFor="budget"
-                    className="block text-sm font-medium text-foreground mb-2"
-                  >
-                    Budget Range
-                  </label>
-                  <select
-                    id="budget"
-                    name="budget"
-                    required
-                    className="w-full px-4 py-3 rounded-xl border border-border-subdued focus:border-accent-indigo focus:ring-2 focus:ring-accent-indigo/20 outline-none transition-all bg-surface-1 text-foreground"
-                  >
-                    <option value="">Select budget range</option>
-                    <option value="$1,000 - $3,000">$1,000 - $3,000</option>
-                    <option value="$3,000 - $5,000">$3,000 - $5,000</option>
-                    <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                    <option value="$10,000+">$10,000+</option>
                   </select>
                 </div>
                 <div>
@@ -200,7 +163,7 @@ export function Contact() {
                     minLength={10}
                     maxLength={1000}
                     rows={5}
-                    className="w-full px-4 py-3 rounded-xl border border-border-subdued focus:border-accent-indigo focus:ring-2 focus:ring-accent-indigo/20 outline-none transition-all resize-none bg-surface-1 text-foreground placeholder:text-muted-foreground"
+                    className="w-full px-4 py-3 rounded-xl border border-border-subdued focus:border-accent-primary focus:ring-2 focus:ring-accent-primary/20 outline-none transition-all resize-none bg-surface-1 text-foreground placeholder:text-muted-foreground"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -215,7 +178,7 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-8 py-4 bg-accent-indigo text-white font-medium rounded-xl hover:bg-opacity-90 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-accent-indigo focus:ring-offset-2 focus:ring-offset-background"
+                  className="w-full px-8 py-4 bg-accent-primary text-white font-medium rounded-xl hover:bg-opacity-90 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                   <Send className="w-5 h-5" aria-hidden="true" />
@@ -233,7 +196,7 @@ export function Contact() {
           >
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-surface-2 rounded-xl flex items-center justify-center flex-shrink-0">
-                <Mail className="w-6 h-6 text-accent-indigo" />
+                <Mail className="w-6 h-6 text-accent-primary" />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-foreground mb-1">Email</h3>
@@ -248,7 +211,7 @@ export function Contact() {
 
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-surface-2 rounded-xl flex items-center justify-center flex-shrink-0">
-                <Phone className="w-6 h-6 text-accent-indigo" />
+                <Phone className="w-6 h-6 text-accent-primary" />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-foreground mb-1">Phone</h3>
@@ -263,7 +226,7 @@ export function Contact() {
 
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-surface-2 rounded-xl flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-6 h-6 text-accent-indigo" />
+                <MapPin className="w-6 h-6 text-accent-primary" />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-foreground mb-1">Location</h3>

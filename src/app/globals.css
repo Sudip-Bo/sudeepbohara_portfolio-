@@ -3,24 +3,24 @@
 @tailwind utilities;
 
 :root {
-  /* Brand Guide Color Palette - Light Theme */
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-  --primary: #0a0a0a;
-  --primary-foreground: #ffffff;
-  --surface-1: #f9fafb;
-  --surface-2: #f3f4f6;
-  --frosted-glass: rgba(255, 255, 255, 0.8);
-  --border-subdued: rgba(0, 0, 0, 0.1);
-  --border-highlight: rgba(0, 0, 0, 0.2);
-  --accent-indigo: #6366F1;
-  --accent-cyan: #06B6D4;
-  --accent-emerald: #10B981;
-  --muted: rgba(0, 0, 0, 0.6);
-  --muted-foreground: rgba(0, 0, 0, 0.5);
+  /* Premium Neutral Palette - Restrained & Sophisticated */
+  --background: #fafafa;
+  --foreground: #1a1a1a;
+  --primary: #1a1a1a;
+  --primary-foreground: #fafafa;
+  --surface-1: #ffffff;
+  --surface-2: #f5f5f5;
+  --surface-3: #e8e8e8;
+  --frosted-glass: rgba(255, 255, 255, 0.85);
+  --border-subdued: rgba(0, 0, 0, 0.08);
+  --border-highlight: rgba(0, 0, 0, 0.15);
+  --accent-primary: #2d2d2d;
+  --accent-secondary: #4a4a4a;
+  --muted: rgba(0, 0, 0, 0.5);
+  --muted-foreground: rgba(0, 0, 0, 0.4);
   --card: #ffffff;
-  --card-foreground: #0a0a0a;
-  --border: rgba(0, 0, 0, 0.1);
+  --card-foreground: #1a1a1a;
+  --border: rgba(0, 0, 0, 0.08);
 }
 
 body {

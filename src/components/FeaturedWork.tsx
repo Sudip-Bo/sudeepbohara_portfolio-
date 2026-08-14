@@ -31,7 +31,7 @@ const fallbackProjects: Project[] = [
   {
     id: '3',
     title: 'SaaS Dashboard',
-    category: 'UI/UX Design',
+    category: 'Web Application',
     imageUrl: null,
     slug: 'saas-dashboard',
   },
@@ -81,7 +81,7 @@ export function FeaturedWork() {
     return null;
   }
   return (
-    <section className="py-24 px-6 bg-surface-1">
+    <section className="py-20 px-6 bg-surface-1">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -94,8 +94,7 @@ export function FeaturedWork() {
             Featured Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Selected portfolio projects demonstrating my approach to premium
-            digital experiences
+            Selected work demonstrating design precision and technical execution
           </p>
         </motion.div>
 
@@ -128,10 +127,10 @@ export function FeaturedWork() {
                 )}
               </div>
               <div className="p-6">
-                <div className="text-sm font-medium text-accent-cyan mb-2">
+                <div className="text-sm font-medium text-accent-secondary mb-2">
                   {project.category}
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-accent-indigo transition-colors">
+                <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-accent-primary transition-colors">
                   {project.title}
                 </h3>
                 <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">

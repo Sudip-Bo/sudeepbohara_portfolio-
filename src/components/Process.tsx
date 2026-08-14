@@ -8,37 +8,37 @@ const steps = [
     icon: MessageSquare,
     title: "Discovery",
     description:
-      "I learn about your business, goals, and target audience to create a solid foundation.",
+      "Understanding your business, goals, and audience to establish project direction.",
   },
   {
     icon: Palette,
     title: "Design",
     description:
-      "I create designs that align with your brand and serve your users' needs.",
+      "Creating visual solutions that align with your brand and serve user needs.",
   },
   {
     icon: Code2,
     title: "Development",
     description:
-      "I build your solution using modern technologies for optimal performance.",
+      "Building with modern technologies for performance, maintainability, and scale.",
   },
   {
     icon: Rocket,
     title: "Launch",
     description:
-      "I deploy your website and ensure everything runs smoothly from day one.",
+      "Deploying your solution and ensuring smooth operation from day one.",
   },
   {
     icon: CheckCircle,
     title: "Support",
     description:
-      "Ongoing support to keep your digital presence at its best as your business grows.",
+      "Ongoing support to maintain performance and adapt to your evolving needs.",
   },
 ];
 
 export function Process() {
   return (
-    <section className="py-24 px-6 bg-surface-1">
+    <section className="py-20 px-6 bg-surface-1">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,10 +48,10 @@ export function Process() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 display-tight">
-            My Process
+            Process
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A clear, collaborative approach to building your digital presence
+            A structured approach to delivering quality digital solutions
           </p>
         </motion.div>
 
@@ -68,9 +68,9 @@ export function Process() {
             >
               <div className="relative mb-6">
                 <div className="w-16 h-16 bg-surface-2 rounded-2xl shadow-sm flex items-center justify-center mx-auto">
-                  <step.icon className="w-8 h-8 text-accent-indigo" />
+                  <step.icon className="w-8 h-8 text-accent-primary" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-accent-indigo rounded-full flex items-center justify-center text-white text-sm font-bold">
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-accent-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
                   {index + 1}
                 </div>
               </div>
