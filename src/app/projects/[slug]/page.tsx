@@ -12,15 +12,26 @@ interface ProjectPageProps {
 }
 
 export async function generateStaticParams() {
-  const projects = await prisma.project.findMany({
-    where: { published: true },
-    select: { slug: true },
-  });
+  try {
+    const projects = await prisma.project.findMany({
+      where: { published: true },
+      select: { slug: true },
+    });
 
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
+    return projects.map((project) => ({
+      slug: project.slug,
+    }));
+  } catch (error) {
+    // If database is unavailable during build (e.g., Vercel build),
+    // return empty array to make the route dynamic instead of static.
+    // This ensures the build succeeds while preserving functionality.
+    console.error('Database unavailable during build:', error);
+    return [];
+  }
 }
+
+// Allow dynamic rendering as fallback when static generation fails
+export const dynamic = 'auto';
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const project = await prisma.project.findUnique({
